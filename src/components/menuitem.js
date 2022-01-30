@@ -1,6 +1,6 @@
 import { Menu } from '@headlessui/react'
 
-
+import { Link } from 'react-router-dom'
 import { Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
@@ -9,13 +9,13 @@ import { ChevronDownIcon } from '@heroicons/react/solid'
 
 export default function MenuItem(props) {
     return (
-        <div className="w-30 text-right mx-2 ">
+        <div className="w-30 text-right mx-2  ">
             <Menu as="div" className="relative inline-block text-left">
                 <div>
-                    <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                    <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-primary-600  rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                         {props.title}
                         {props.subelements && props.subelements.length > 0 && <ChevronDownIcon
-                            className="w-5 h-5 ml-2 -mr-1 text-primary-600 hover:text-violet-100"
+                            className="w-5 h-5 ml-2 -mr-1 text-secondary-600 hover:text-violet-100"
                             aria-hidden="true"
                         />}
                     </Menu.Button>
@@ -29,13 +29,13 @@ export default function MenuItem(props) {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                 >
-                    <Menu.Items className="absolute  right-0 w-36 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute  right-0 w-40 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div className="px-1 py-1 ">
 
                             {props.subelements.map((element, i) => (
                                 <Menu.Item>
                                     {({ active }) => (
-                                        <button
+                                        <Link to={element.path ? element.path : "/"} className="hover:text-current hover:no-underline">  <button
                                             className={`${active ? ' text-white' : 'text-primary-600 hover:text-primary-600'
                                                 } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                                         >
@@ -43,11 +43,11 @@ export default function MenuItem(props) {
                                             <div
                                                 className="w-5 h-5 mr-2 hover:text-primary-600 group"
                                                 aria-hidden="true">
-                                               <div className=' group-hover:opacity-5'>{element.icon}</div> 
+                                                <div className=' group-hover:opacity-5'>{element.icon}</div>
                                             </div>
 
                                             <div className='text-secondary-600 hover:text-primary-600'>{element.name}</div>
-                                        </button>
+                                        </button></Link>
                                     )}
                                 </Menu.Item>
                             ))}

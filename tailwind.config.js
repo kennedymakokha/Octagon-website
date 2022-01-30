@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'about': "url('assets/about.jpeg')",
+      },
       colors: {
         'primary': {
           '600': '#950098',
