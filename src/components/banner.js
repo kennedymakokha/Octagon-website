@@ -24,7 +24,7 @@ export function Banner(props) {
 
                 <div className='bg-gradient-to-r from-indigo-500 w-screen py-4 md:flex hidden'>
                     <div className='px-20 text-white font-bold'>
-                        <span className='text-white font-bold'>Home</span><span className='px-1 text-secondary-600'>|</span><span className='text-gray-400 font-medium italic '>{props.active}</span>
+                        <span className='text-white font-bold'>Home</span> <span className='text-white font-bold'>Campany</span><span className='px-1 text-secondary-600'>|</span><span className='text-gray-400 font-medium italic '>{props.active}</span>
                     </div>
                 </div>
 

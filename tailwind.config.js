@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'about': "url('assets/about.jpeg')",
+        'team': "url('assets/team.jpeg')",
       },
       colors: {
         'primary': {

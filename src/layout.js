@@ -10,7 +10,7 @@ function Layout(props) {
                 <div class="absolute inset-0 flex  z-10">
                     <div className='flex flex-col'>
                         <MenuComponent />
-                        <div className='w-full h-screen  pt-4'>
+                        <div className='w-full h-screen'>
                             {props.children}
                         </div>
                     </div>
