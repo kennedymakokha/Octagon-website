@@ -1,19 +1,40 @@
 import { Banner, TitleContainer } from '../components/banner';
 import Layout from '../layout';
+import Vision from './../img/vision.jpg'
+import Mision from './../img/about.jpg'
 function Origin() {
     return (
         <Layout>
             <Banner bg="bg-about"
-                active="about-us"
+                active="About-us"
                 title="About Us"
                 desc="Octagon Dynamics  is  ...."
             />
-            <TitleContainer title="About Us" />
-            <div className='md:px-20 px-10 w-full h-12 border-gray-50 border-2  shadow-gray-600'>
-                <div class="flex flex-wrap flex-row">
-                    <p className=' float-right'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at scelerisque mauris, quis placerat risus. Vivamus est eros, dapibus et dui posuere, feugiat volutpat leo. Donec suscipit, purus nec feugiat varius, nulla turpis egestas dui, vulputate hendrerit magna lacus ac dolor. Proin tincidunt porttitor lectus sit amet iaculis. Ut in tincidunt mi. Phasellus ac ante vitae urna elementum rhoncus. Donec blandit mauris et dolor fringilla aliquet. Sed sem nisl, finibus vitae odio at, ullamcorper tristique arcu. Donec nec dolor eget mi condimentum mattis. Nam non arcu erat. Phasellus et augue aliquet, tempor felis ac, bibendum risus. Integer eu est lectus. Quisque laoreet purus massa, non ultrices lectus maximus fermentum. Sed aliquet diam vel nibh vulputate, vel dignissim justo pellentesque.
-                    </p>
+
+            <div className='md:px-20 px-10 w-full pb-10 '>
+                <div className="flex flex-wrap flex-row w-full">
+                    <div className=' w-full '>
+                        <div className='w-full border  border-dotted mt-10 border-primary-600  pr-4 h-80'>
+                            <div className='py-10 px-10 flex'>
+                                <div className=' text-xl text-gray-600'>
+                                    <div  className='flex flex-wrap'>
+                                        <div className='w-1/5'>
+                                            <img src={Mision} alt="" height={20}  />
+                                            </div>
+                                        <p className='w-4/5 '>
+                                            Octagon is a home of excellence
+                                            comprising of highly skilled and motivated technology experts who help design, customize and deliver
+                                            the relevant value and results to the client.
+                                            
+                                       
+                                        </p>
+                                        
+                                    </div>
+                                    <p className='pt-2 '> The results are meant to ensure sustainable business growth and continuity. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Layout>

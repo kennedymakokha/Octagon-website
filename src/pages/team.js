@@ -9,13 +9,13 @@ function Team() {
     function MemberCard(props) {
 
         return (
-            <div className='md:w-1/4 w-full '>
-                <div class=" bg-white h-96 relative z-0 border-dotted shadow-2xl rounded-xl m-2 " >
+            <div className='md:w-1/4 w-screen '>
+                <div className=" bg-white h-96 relative z-0 border-dotted shadow-2xl rounded-xl m-2 " >
                     <div className='h-3/4'>
                        <img src={Image} alt="" className=' h-full w-full  object-contain  rounded-b-xl ' />  
                     </div>
                    
-                    <div class="absolute bg-white bottom-0 w-full h-1/4 z-10 rounded-t-xl  border-r border-l border-r-dotted border-t border-t-primary-600" >
+                    <div className="absolute bg-white bottom-0 w-full h-1/4 z-10 rounded-t-xl  border-r border-l border-r-dotted border-t border-t-primary-600" >
                         <div className='flex justify-center items-center flex-col bg-white'>
                             <h3 className='text-2xl text-secondary-600'>{props.name}</h3>
                             <h3 className=' text-black-600'>{props.designation} </h3>
@@ -38,7 +38,7 @@ function Team() {
             />
             <TitleContainer title="Our Team Members" />
             
-            <div class="flex flex-wrap  md:px-20 px-10 w-screen">
+            <div className="flex flex-wrap  md:px-20 px-10 w-screen">
                 <MemberCard name="Devis" designation="Senior Manager" />
                 <MemberCard name="John Kevin" designation="Marketing Manager" />
                 <MemberCard name="Kennedy Makokha" designation="Developer" />

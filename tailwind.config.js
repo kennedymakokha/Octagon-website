@@ -7,6 +7,9 @@ module.exports = {
       backgroundImage: {
         'about': "url('assets/about.jpeg')",
         'team': "url('assets/team.jpeg')",
+        'contact': "url('assets/contact.jpeg')",
+        'vision': "url('assets/vision.jpg')",
+        'origin': "url('assets/origin.jpg')",
       },
       colors: {
         'primary': {

@@ -11,15 +11,17 @@ export default function MenuItem(props) {
     return (
         <div className="w-30 text-right mx-2  ">
             <Menu as="div" className="relative inline-block text-left">
-                <div>
-                    <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-primary-600  rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                        {props.title}
-                        {props.subelements && props.subelements.length > 0 && <ChevronDownIcon
-                            className="w-5 h-5 ml-2 -mr-1 text-secondary-600 hover:text-violet-100"
-                            aria-hidden="true"
-                        />}
-                    </Menu.Button>
-                </div>
+                <Link to={props.rootpath ? props.rootpath : ''}>
+                    <div>
+                        <Menu.Button className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-primary-600  rounded-md bg-opacity-20 hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                            {props.title}
+                            {props.icon ? props.icon : props.subelements && props.subelements.length > 0 && <ChevronDownIcon
+                                className="w-5 h-5 ml-2 -mr-1 text-secondary-600 hover:text-violet-100"
+                                aria-hidden="true"
+                            />}
+                        </Menu.Button>
+                    </div>
+                </Link>
                 {props.subelements && props.subelements.length > 0 && <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
@@ -33,20 +35,19 @@ export default function MenuItem(props) {
                         <div className="px-1 py-1 ">
 
                             {props.subelements.map((element, i) => (
-                                <Menu.Item>
+                                <Menu.Item  key={i}>
                                     {({ active }) => (
                                         <Link to={element.path ? element.path : "/"} className="hover:text-current hover:no-underline">  <button
                                             className={`${active ? ' text-white' : 'text-primary-600 hover:text-primary-600'
                                                 } group flex rounded-md items-center w-full px-2 py-2 text-sm`}
                                         >
-
                                             <div
                                                 className="w-5 h-5 mr-2 hover:text-primary-600 group"
                                                 aria-hidden="true">
-                                                <div className=' group-hover:opacity-5'>{element.icon}</div>
+                                                {element.icon ? <div className=' group-hover:opacity-5'>{element.icon}</div> : <svg className="w-5 h-5 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>}
                                             </div>
 
-                                            <div className='text-secondary-600 hover:text-primary-600'>{element.name}</div>
+                                            <div className='text-secondary-600 hover:text-primary-600 '>{element.name}</div>
                                         </button></Link>
                                     )}
                                 </Menu.Item>
@@ -56,7 +57,7 @@ export default function MenuItem(props) {
                     </Menu.Items>
                 </Transition>}
             </Menu>
-        </div>
+        </div >
     )
 }
 
