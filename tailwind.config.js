@@ -10,6 +10,8 @@ module.exports = {
         'contact': "url('assets/contact.jpeg')",
         'vision': "url('assets/vision.jpg')",
         'origin': "url('assets/origin.jpg')",
+        'project': "url('assets/projects.jpg')",
+        'home': "url('assets/home.jpg')",
       },
       colors: {
         'primary': {
