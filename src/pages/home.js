@@ -72,7 +72,7 @@ function Home() {
 
     const clientsArray = [
         { "avatar": Rata, "name": "Retta Solutions" },
-        { "avatar": Acuman, "name": "Uganda Acumen Sacco" },
+        { "avatar": Acuman, "name": "Uganda Acumen Sacco"},
         { "avatar": Mzendu, "name": "Mzedu Mzima Sacco" },
         { "avatar": Utafiti, "name": "Utafiti National Council For Population & Development(NCPD)" },
         { "avatar": Kccup, "name": "Kuccps" },
