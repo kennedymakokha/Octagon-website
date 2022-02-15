@@ -95,15 +95,15 @@ function Home() {
 
             <div className='h-5/6 px-20 py-10  bg-zinc-300'>
                 <div className='flex w-full  '>
-                    <div className=' w-1/2 p-20 flex justify-center items-center flex-col text-center'>
+                    <div className=' md:w-1/2 w-full md:p-20 p-0 flex justify-center items-center flex-col text-center'>
                         <h3 className='text-4xl '>
                             <span className='text-primary-600'>Octagon</span> <span className='text-secondary-600'>Dynamics</span> are trusted across Africa,
                             with over 13 years experience.
                         </h3>
                         <p className='text-xl'> In today’s world, delivering a great customer experience is essential in differentiating your business and building loyalty with your customers.</p>
                     </div>
-                    <div className=' w-1/2 px-4 hover:scale-105 '>
-                        <img src={Trust} alt="" />
+                    <div className=' md:w-1/2 w-full md:px-4 px-0 hover:scale-105  md:flex hidden'>
+                        <img src={Trust}  className="md:flex hidden"  alt="" />
                     </div>
                 </div>
             </div>

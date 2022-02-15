@@ -44,7 +44,7 @@ export const Settings = {
   autoplaySpeed: 5000,
   pauseOnHover: true,
   cssEase: "linear",
-  className: " bg-white"
+  className: "bg-secondary-50 pt-10"
 };
 
 export const SliderSettings = {
@@ -57,7 +57,7 @@ export const SliderSettings = {
   autoplaySpeed: 5000,
   pauseOnHover: true,
   cssEase: "linear",
-  className: "absolute -z-50",
+  className: "absolute -z-50 w-full",
   responsive: [
     {
       breakpoint: 1024,
