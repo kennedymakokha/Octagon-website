@@ -1,5 +1,5 @@
 
-import { TitleContainer } from '../components/banner';
+import { Homeslider, TitleContainer } from '../components/banner';
 import Layout from '../layout';
 import Kengen from './../img/products/kengen.jpg'
 import Kccup from './../img/products/Kuccps.png'
@@ -11,7 +11,7 @@ import Utafiti from './../img/products/utafiti.png'
 import Slider1 from './../img/sliderimages/slider1.png'
 import Trust from './../img/trust.jpg'
 import Slider from "react-slick";
-import { ResponseSettings, Settings } from '../config/sliderSettings';
+import { ResponseSettings, Settings, SliderSettings } from '../config/sliderSettings';
 
 
 
@@ -48,22 +48,22 @@ const Services = [
     {
         title: 'Dynamic CRM',
         desc: 'Open Endless opportunities with Dynamics 365 CRM',
-        avatar: Kengen,
+        avatar: "bg-cms",
     },
     {
-        title: 'SACCO CORE banking solution ',
+        title: 'SACCO core banking solution ',
         desc: 'Grow your SACCO today with simpler solutions',
-        avatar: Acuman,
+        avatar: "bg-origin",
     },
     {
         title: 'Dynamic grands Management',
         desc: '',
-        avrata: ''
+        avatar: "bg-dyna",
     },
     {
         title: 'Digital platforms fro SACCOs',
         desc: 'Taje control of your SACCO operations today',
-        avrata: ''
+        avatar: "bg-origin",
     }
 
 ]
@@ -72,7 +72,7 @@ function Home() {
 
     const clientsArray = [
         { "avatar": Rata, "name": "Retta Solutions" },
-        { "avatar": Acuman, "name": "Uganda Acumen Sacco"},
+        { "avatar": Acuman, "name": "Uganda Acumen Sacco" },
         { "avatar": Mzendu, "name": "Mzedu Mzima Sacco" },
         { "avatar": Utafiti, "name": "Utafiti National Council For Population & Development(NCPD)" },
         { "avatar": Kccup, "name": "Kuccps" },
@@ -82,15 +82,17 @@ function Home() {
 
     return (
         <Layout>
-            <div className='h-screen  relative min-w-screen  z-90  '>
-                <Slider {...ResponseSettings}>
-                    {Services.map((project, i) => (
-                        <ServiceCard title={project.title} avatar={project.avatar} key={i} />
-                    ))}
+            <Slider {...SliderSettings}>
+                {Services.map((project, i) => (
+                    <Homeslider
+                        name={project.title}
+                        bg={project.avatar}
+                        desc={project.desc}
+                        key={i} />
+                ))}
+            </Slider>
+            {/* <Homeslider /> */}
 
-
-                </Slider>
-            </div>
             <div className='h-5/6 px-20 py-10  bg-zinc-300'>
                 <div className='flex w-full  '>
                     <div className=' w-1/2 p-20 flex justify-center items-center flex-col text-center'>

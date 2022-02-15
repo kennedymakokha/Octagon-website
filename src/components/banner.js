@@ -5,7 +5,7 @@ export function Banner(props) {
     const classStr = classNames(
         "w-screen md:w-full md:h-3/4 h-1/2 relative -z-10   bg-no-repeat object-cover  ",
         props.bg,
-        
+
     );
     return (
         <div className={classStr}>
@@ -29,6 +29,45 @@ export function Banner(props) {
             </div>
 
         </div>
+
+    );
+}
+
+export function Homeslider(props) {
+    console.log(props)
+    const classStr = classNames(
+        "w-screen md:w-full md:h-screen h-screen relative -z-10   bg-no-repeat object-cover ",
+        props.bg,
+
+    );
+    return (
+        <div className={classStr}>
+            <div className="absolute inset-0 flex justify-center items-center z-50 t-0 l-0 bg-black h-full w-full opacity-60">
+            </div>
+            <div className='flex flex-col  justify-between h-full'>
+                <div className="md:pt-28 pt-20 md:px-20 px-10 flex  h-full inset-0  ">
+                    <div className="md:w-1/2 w-5/6 md:h-5/6 h-1/2  relative -z-10 flex items-center justify-center ">
+                        <div className="absolute inset-0 flex justify-center items-center z-20 t-0 l-0 bg-white h-full w-full opacity-90">
+                        </div>
+                        <div className=" absolute   z-50">
+                            <h3 className="text-center  md:text-5xl text-3xl md:pl-10 text-secondary-600">{props ? props.name : null}</h3>
+                            <h2 className="text-center">{props ? props.desc : "keb=nne"}</h2>
+                        </div>
+                        
+                    </div>
+
+                    {/* <div className="w-1/2  ">
+                        <h3 className=" capitalize md:text-5xl text-3xl md:pl-10 text-secondary-600  z-50">{props ? props.name : null}</h3>
+                    </div> */}
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
 
     );
 }

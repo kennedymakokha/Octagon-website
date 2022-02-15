@@ -5,7 +5,7 @@ import FloatingWhatsApp from 'react-floating-whatsapp'
 function Layout(props) {
     return (
         <div className="w-screen h-screen flex relative flex-col ">
-            <div className=" relative z-0 w-full ">
+            <div className=" relative z-10 w-full ">
                 <div className="">
                     <div className='flex flex-col'>
                         <MenuComponent />
@@ -22,7 +22,7 @@ function Layout(props) {
                     avatar="/img/logo.jpg"
                     statusMessage="An Octagon Assistant will text back ASAP"
                     accountName="Octagon Dynamics"
-                    className="z-5"
+                    className=" absolute z-50"
                     chatMessage="Hello can we be of help"
                 />
             </div>

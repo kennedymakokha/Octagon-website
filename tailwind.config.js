@@ -12,6 +12,8 @@ module.exports = {
         'origin': "url('assets/origin.jpg')",
         'project': "url('assets/projects.jpg')",
         'home': "url('assets/home.jpg')",
+        'cms': "url('assets/cms.jpg')",
+        'dyna': "url('assets/dynamics.jpg')",
       },
       colors: {
         'primary': {
