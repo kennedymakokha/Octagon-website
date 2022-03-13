@@ -6,6 +6,7 @@ function Mission() {
     return (
         <Layout>
             <Banner bg="bg-vision"
+                level1="Company"
                 active="Misssion & Vision"
                 title="Our Mission and Vision"
                 desc="Octagon Dynamics  is  ...."

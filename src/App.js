@@ -1,5 +1,9 @@
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
+import Consaltancy from './pages/consultancy';
 import Contact from './pages/contact';
+import Erp from './pages/Erp';
+import ErpElement from './pages/ErpElement';
+
 import Home from './pages/home';
 import Login from './pages/login';
 import Mission from './pages/mission';
@@ -17,6 +21,10 @@ function App() {
         <Route path="/contact-us" element={<Contact />}></Route>
         <Route path="/our-mission-vision" element={<Mission />}></Route>
         <Route path="/our-projects" element={<Project />}></Route>
+        <Route path="/erp" element={<Erp />}></Route>
+      
+        <Route path="/erp/:erpelement" element={<ErpElement />}></Route>
+        <Route path="/consultancy" element={<Consaltancy />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
       </Routes>

@@ -23,7 +23,13 @@ export function Banner(props) {
 
                 <div className='bg-gradient-to-r from-indigo-500 w-screen py-4 md:flex hidden absolute z-50 bottom-0'>
                     <div className='px-20 text-white font-bold'>
-                        <span className='text-white font-bold '>Home</span> <span className='text-white font-bold'>Campany</span><span className='px-1 text-secondary-600'>|</span><span className='text-gray-400 font-medium italic '>{props.active}</span>
+                        <span className='text-white font-bold '>Home</span>
+                        {props.level1 && <span className='px-1 text-secondary-600'>|</span>}
+                        <span className='text-white font-bold'>{props.level1 && props.level1}</span>
+                        {props.level2 && <span className='px-1 text-secondary-600'>|</span>}
+                        <span className='text-white font-bold'>{props.level2 && props.level2}</span>
+                        <span className='px-1 text-secondary-600'>|</span>
+                        <span className='text-gray-400 font-medium italic '>{props.active}</span>
                     </div>
                 </div>
             </div>
@@ -34,7 +40,7 @@ export function Banner(props) {
 }
 
 export function Homeslider(props) {
-    console.log(props)
+
     const classStr = classNames(
         "w-screen md:w-full md:h-screen h-screen relative -z-10   bg-no-repeat object-cover ",
         props.bg,
@@ -42,16 +48,18 @@ export function Homeslider(props) {
     );
     return (
         <div className={classStr}>
-            <div className="absolute inset-0 flex justify-center items-center z-50 t-0 l-0 bg-black h-full w-full opacity-20">
+            <div className="absolute inset-0 flex justify-center items-center z-50 t-0 l-0 bg-black h-full w-full opacity-50">
+
             </div>
             <div className='flex flex-col  justify-between h-full'>
-                <div className="md:pt-20 pt-14 md:px-20 px-10 flex  h-4/5 inset-0  ">
+                <div className="md:pt-20 pt-14 md:px-20 px-10 flex  h-full inset-0  ">
                     <div className="md:w-1/2 w-5/6 md:h-5/6 h-1/2  relative -z-10 flex items-center justify-center rounded-full ">
-                        <div className="absolute inset-0 flex justify-center items-center z-20 t-0 l-0 bg-white h-full w-full opacity-90">
+                        <div className="absolute inset-0 flex justify-center items-center z-20 t-0 l-0 bg-white h-full w-full opacity-80">
                         </div>
                         <div className=" absolute   z-50">
                             <h3 className="text-center  md:text-5xl text-3xl md:pl-10 text-secondary-600">{props ? props.name : null}</h3>
-                            <h2 className="text-center">{props ? props.desc : "keb=nne"}</h2>
+                            {/* <h2 className="text-center">{props ? props.desc : "keb=nne"}</h2> */}
+
                         </div>
 
                     </div>
@@ -59,6 +67,7 @@ export function Homeslider(props) {
                     {/* <div className="w-1/2  ">
                         <h3 className=" capitalize md:text-5xl text-3xl md:pl-10 text-secondary-600  z-50">{props ? props.name : null}</h3>
                     </div> */}
+                    {/* <button className="text-white text-5xl" onClick={()=>alert(`${props.desc}`)}> More</button> */}
 
                 </div>
 

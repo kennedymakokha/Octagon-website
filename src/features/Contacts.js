@@ -8,8 +8,10 @@ export const contactSlice = createSlice({
         post: async (state, action) => {
             // state.value = action.payload
             try {
+                
                 setAuthToken(axios);
-                const response = await axios.post(`/api/octagon`, action.payload);
+              
+                const response = await axios.post(`/api/ocatagon-dynamics/sent-mail`, action.payload);
 
             } catch (error) {
                 throw error;

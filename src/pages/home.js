@@ -1,17 +1,10 @@
 
 import { Homeslider, TitleContainer } from '../components/banner';
 import Layout from '../layout';
-import Kengen from './../img/products/kengen.jpg'
-import Kccup from './../img/products/Kuccps.png'
-import Mzendu from './../img/products/mzedu.jpg'
-import Ncpb from './../img/products/ncpd.jpg'
-import Acuman from './../img/products/acumen.png'
-import Rata from './../img/products/rettajpg.jpg'
-import Utafiti from './../img/products/utafiti.png'
-import Slider1 from './../img/sliderimages/slider1.png'
 import Trust from './../img/trust.jpg'
 import Slider from "react-slick";
-import { ResponseSettings, Settings, SliderSettings } from '../config/sliderSettings';
+import { SlidercomponentArray, clientsArray } from './../data'
+import { Settings, SliderSettings } from '../config/sliderSettings';
 
 
 
@@ -25,65 +18,16 @@ function ClientCard(props) {
 
     );
 }
-function ServiceCard(props) {
-    return (
-        <div className='  h-screen w-full my-10  flex justify-center items-center flex-row'>
-            <div className="flex flex-wrap  md:px-20 px-10 w-full ">
-                <div className='md:w-1/3 w-full h-5/6' >
-                    <div className="  h-screen relative z-0 border-dotted rounded-xl flex justify-center items-center flex-col" >
-                        <h3 className='text-primary-600 text-5xl font-bold'>{props.title}</h3>
 
-                    </div>
-                </div>
-                <div className='md:w-2/3 w-full h-screen ' >
-                    <div className="  h-full flex   rounded-tl-3xl" >
-                        <img src={props.avatar} className='h-full w-full object-contain rounded-full ' alt="" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
-const Services = [
-    {
-        title: 'Dynamic CRM',
-        desc: 'Open Endless opportunities with Dynamics 365 CRM',
-        avatar: "bg-cms",
-    },
-    {
-        title: 'SACCO core banking solution ',
-        desc: 'Grow your SACCO today with simpler solutions',
-        avatar: "bg-origin",
-    },
-    {
-        title: 'Dynamic grands Management',
-        desc: '',
-        avatar: "bg-dyna",
-    },
-    {
-        title: 'Digital platforms fro SACCOs',
-        desc: 'Taje control of your SACCO operations today',
-        avatar: "bg-origin",
-    }
-
-]
 
 function Home() {
 
-    const clientsArray = [
-        { "avatar": Rata, "name": "Retta Solutions" },
-        { "avatar": Acuman, "name": "Uganda Acumen Sacco" },
-        { "avatar": Mzendu, "name": "Mzedu Mzima Sacco" },
-        { "avatar": Utafiti, "name": "Utafiti National Council For Population & Development(NCPD)" },
-        { "avatar": Kccup, "name": "Kuccps" },
-        { "avatar": Ncpb, "name": "NCPB" },
-        { "avatar": Kengen, "name": "KenGenSRBS" }
-    ]
+
 
     return (
         <Layout>
             <Slider {...SliderSettings}>
-                {Services.map((project, i) => (
+                {SlidercomponentArray.map((project, i) => (
                     <Homeslider
                         name={project.title}
                         bg={project.avatar}
@@ -103,7 +47,7 @@ function Home() {
                         <p className='text-xl'> In today’s world, delivering a great customer experience is essential in differentiating your business and building loyalty with your customers.</p>
                     </div>
                     <div className=' md:w-1/2 w-full md:px-4 px-0 hover:scale-105  md:flex hidden'>
-                        <img src={Trust}  className="md:flex hidden"  alt="" />
+                        <img src={Trust} className="md:flex hidden" alt="" />
                     </div>
                 </div>
             </div>

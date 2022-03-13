@@ -18,7 +18,7 @@ function Contact() {
 
     const submit = () => {
         try {
-            // dispatch(post(data))
+            dispatch(post(data))
             dispatch(clear())
         } catch (error) {
 

@@ -14,6 +14,21 @@ module.exports = {
         'home': "url('assets/home.jpg')",
         'cms': "url('assets/cms.jpg')",
         'dyna': "url('assets/dynamics.jpg')",
+        'oil': "url('assets/oil2.jpg')",
+        'finance': "url('assets/finance.jpg')",
+        'human': "url('assets/human.jpg')",
+        'pay': "url('assets/pay.jpg')",
+        'erp': "url('assets/erp.jpg')",
+        'con': "url('assets/conduct.jpg')",
+        'credit': "url('assets/credit.jpg')",
+        'property': "url('assets/property.jpg')",
+        'contract': "url('assets/contract.jpg')",
+        'logistic': "url('assets/logistic.jpg')",
+        'grants': "url('assets/grants.jpg')",
+        'pension': "url('assets/pension.jpg')",
+        
+        'fosa': "url('assets/fosa.jpg')",
+        'procure': "url('assets/procure.jpg')",
       },
       colors: {
         'primary': {

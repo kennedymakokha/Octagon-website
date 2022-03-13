@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const base = 'http://localhost:2000';
+export const base = 'http://localhost:1400';
 const axiosService = axios.create({
     baseURL: `${base}`,
     timeout: 10000,
@@ -10,6 +10,7 @@ const axiosService = axios.create({
 });
 
 export const setAuthToken = instance => {
+    alert(instance)
     const token = localStorage.getItem('inventory_tkn');
     if (token) {
         instance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
